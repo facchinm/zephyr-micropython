@@ -1,0 +1,26 @@
+# Copyright (c) 2025 Nordic Semiconductor ASA
+# SPDX-License-Identifier: Apache-2.0
+
+manifest:
+  remotes:
+    - name: zephyr-upstream
+      url-base: https://github.com/zephyrproject-rtos
+
+    - name: bjarki-andreasen
+      url-base: https://github.com/bjarki-andreasen
+
+  projects:
+    - name: zephyr
+      remote: zephyr-upstream
+      revision: v4.3.0
+      import: true
+
+    - name: micropython
+      remote: bjarki-andreasen
+      revision: aceafd9e98151dd6f32ff142055947f0f32beeda
+      path: modules/lib/micropython
+      submodules:
+        - path: lib/micropython-lib
+
+  self:
+    path: zephyr-micropython

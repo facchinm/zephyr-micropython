@@ -1,0 +1,3 @@
+build:
+  settings:
+    module_ext_root: .
