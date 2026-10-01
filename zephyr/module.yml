@@ -1,3 +1,6 @@
+name: zephyr-micropython
 build:
+  kconfig: modules/micropython/Kconfig
+  cmake: .
   settings:
     module_ext_root: .
